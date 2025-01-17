@@ -30,15 +30,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/airbnb', airbnbRouter);
 
-mongoose.connect('mongodb://localhost:27017/sample_airbnb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('Connected to MongoDB');
-}).catch((err) =>{
-  log.error('Error connecting to MongoDB', err);
-})
+
+mongoose.connect('',)
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
 
 
 
