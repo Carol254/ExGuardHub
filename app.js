@@ -3,6 +3,7 @@ const usersRouter = require('./routes/users');
 const airbnbRouter = require('./routes/airbnb');
 
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 var createError = require('http-errors');
 var express = require('express');
@@ -16,6 +17,8 @@ const { log } = require('console');
 
 var app = express();
 
+
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
